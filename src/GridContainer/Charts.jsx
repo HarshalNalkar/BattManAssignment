@@ -1,5 +1,8 @@
 import React from "react";
-import PieChart from "./pieChart.svg";
+// import PieChart from "./pieChart.svg";
+import FleetHealth from "./FleetHealth";
+import BatteryChemistry from "./BatteryChemistry";
+import FlightMin from "./FlightMin";
 
 function Charts() {
   return (
@@ -180,7 +183,25 @@ function Charts() {
 
         <div className="blocks" id="quickStats">
           <h1>Quick Stats</h1>
-          <img src={PieChart} alt="not found" />
+          {/* <img src={PieChart} alt="not found" /> */}
+          <div className="pieChart" id="pieChart">
+            <div className="pie" id="pie1">
+              <div className="fleetHealth" id="fleetHealth">
+                <FleetHealth />
+              </div>
+              <div className="flightMin" id="flightMin">
+                <FlightMin />
+              </div>
+            </div>
+            <div className="pie" id="pie2">
+              <div className="batteryChemistry" id="batteryChemistry">
+                <BatteryChemistry />
+              </div>
+              <div className="chargingCycle" id="chargingCycle">
+                <BatteryChemistry />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="blocks1" id="flightLog">
